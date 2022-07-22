@@ -3,7 +3,9 @@
 
 <head>
     <title>fakestore2</title>
-    <link rel="stylesheet" href="src/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <script>
 
         function loadCategories() {
@@ -45,13 +47,13 @@
                         <dd>${item.price}</dd>
                         <dt>Rating</dt>
                         <dd>
-                        <span class=" text-warning"></span>
+                        <span class="bi bi-star-fill text-warning"></span>
                         ${item.rating.rate} [${item.rating.count}]
                         </dd>
                     </dl>
                 </div>
                 <div class="card-footer">
-                    <button onclick="addToCartClick(${item.id} )" class="btn btn-danger w-100"><span ></span>Add to Cart</button>
+                    <button onclick="addToCartClick(${item.id} )" class="btn btn-danger w-100"><span class="bi bi-cart2"></span>Add to Cart</button>
                 </div>
  
                 `
@@ -123,7 +125,7 @@
 
 <body onload="bodyload()" class="container-fluid">
     <header class="bg-danger text-white text-center m-2 p-2">
-        <h2><span>Shopping Online</span></h2>
+        <h2><span class="bi bi-cart2">Shopping Online</span></h2>
     </header>
     <section class="row">
         <nav class="col-2">
@@ -140,7 +142,7 @@
         <article class="col-2">
             <button onclick="ShowCartItemsClick()" data-bs-target="#cart" data-bs-toggle="modal"
                 class="btn btn-danger w-100">
-                <span class=""></span>
+                <span class="bi bi-cart2"></span>
                 [<span id="cartCount"></span>]Add to Cart
             </button>
         </article>
@@ -169,8 +171,9 @@
             </div>
         </div>
     </div>
-    <script src="src/jquery.js">
-    </script>
-    <script src="src/bootstrap.bundle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 
 </html>
